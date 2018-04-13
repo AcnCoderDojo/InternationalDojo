@@ -1,38 +1,7 @@
-AmCharts.makeChart( "mapdiv", {
-  /**
-   * this tells amCharts it's a map
-   */
-  "type": "map",
-
-  /**
-   * create data provider object
-   * map property is usually the same as the name of the map file.
-   * getAreasFromMap indicates that amMap should read all the areas available
-   * in the map data and treat them as they are included in your data provider.
-   * in case you don't set it to true, all the areas except listed in data
-   * provider will be treated as unlisted.
-   */
-  "dataProvider": {
-    "map": "worldLow",
-    "areas": [
-      { "id": "IE" },
-      { "id": "CO" },
-      { "id": "MX" }
-    ]
-  },
-
-  /**
-   * create areas settings
-   * autoZoom set to true means that the map will zoom-in when clicked on the area
-   * selectedColor indicates color of the clicked area.
-   */
-  "areasSettings": {
-    "autoZoom": true,
-    "selectedColor": "#CC0000"
-  },
-
-  /**
-   * let's say we want a small map to be displayed, so let's create it
-   */
-  "smallMap": {}
-} );
+window.onload = function(){
+	var flag = document.getElementById('flag');
+	drawFlag( flag, 320, 0, 40 );
+	flag.style.marginLeft = -(flag.width/2)+'px';
+	flag.style.marginTop  = -(flag.height/2)+'px';
+	var timer = waveFlag( flag, 20, 10, 150, 200, -0.1 );
+};
