@@ -1,13 +1,26 @@
 <html>
   <head>
 	<title>CoderDojo @Silicon Docks</title>
-	<link rel="stylesheet" type="text/css" href="style.css"/>
-
+	<link rel="stylesheet" type="text/css" href="styleIRE.css"/>
+  <script src="js/ireland.js"></script>
   </head>
 
   <body>
 	<div id="container">
 		<h1>Welcome to our International Accenture Coder Dojo</h1>
 	</div>
+  <div id="search-bar">
+  <label for="s_fullname">Search</label>
+  <input id="s_fullname" type="text" oninput="this.setAttribute('value', this.value)" placeholder="Search person">
+</div>
+
+<div id="results">
+  <div class="result">Ninja 1</div>
+  <div class="result">Ninja 2</div>
+  <div class="result">:</div>
+  <div class="result">:</div>
+  <div class="result">:</div>
+  <div class="result">Ninja N</div>
+</div>
   </body>
 </html>
